@@ -1,0 +1,41 @@
+# Entorno virtual
+venv/
+env/
+.env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Outputs generados (no subir imágenes de pacientes)
+outputs/
+*.png
+*.jpg
+*.jpeg
+*.xlsx
+*.csv
+
+# Excepciones: sí subir las imágenes de muestra
+!samples/*.png
+!samples/*.jpg
+
+# Streamlit
+.streamlit/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Datos sensibles (NUNCA subir imágenes de evaluados reales)
+datos/
+pacientes/
+evaluados/

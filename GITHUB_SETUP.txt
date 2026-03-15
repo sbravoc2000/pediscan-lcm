@@ -1,0 +1,61 @@
+# Guía: cómo subir PediScan LCM a GitHub
+# Para compartir con colegas del LCM - UPC
+
+## PASO 1 — Crear cuenta en GitHub (si no tienes)
+Ir a https://github.com y registrarse con tu correo UPC.
+
+## PASO 2 — Crear repositorio nuevo en GitHub
+1. Hacer clic en el botón verde "New" (esquina superior izquierda)
+2. Nombre del repositorio: pediscan-lcm
+3. Descripción: Análisis de pedígrafía plantar estática - LCM UPC
+4. Visibilidad: Public (para que colegas accedan sin cuenta) o Private (solo invitados)
+5. NO marcar "Add a README file" (ya tenemos el nuestro)
+6. Hacer clic en "Create repository"
+
+## PASO 3 — Instalar Git en Windows
+Descargar de: https://git-scm.com/download/win
+Instalar con opciones por defecto.
+
+## PASO 4 — Subir el proyecto desde tu laptop
+
+Abrir cmd en la carpeta pediscan_lcm y ejecutar:
+
+    git init
+    git add .
+    git commit -m "versión inicial PediScan LCM"
+    git branch -M main
+    git remote add origin https://github.com/TU_USUARIO/pediscan-lcm.git
+    git push -u origin main
+
+Reemplazar TU_USUARIO con tu nombre de usuario de GitHub.
+
+## PASO 5 — Compartir con colegas
+
+Enviarles el enlace: https://github.com/TU_USUARIO/pediscan-lcm
+
+Ellos solo necesitan hacer:
+
+    git clone https://github.com/TU_USUARIO/pediscan-lcm.git
+    cd pediscan-lcm
+    python -m venv venv
+    venv\Scripts\activate
+    pip install -r requirements.txt
+    streamlit run app.py
+
+## PASO 6 — Actualizar cuando hagas cambios
+
+Cuando modifiques el código:
+
+    git add .
+    git commit -m "descripción del cambio"
+    git push
+
+Y tus colegas actualizan con:
+
+    git pull
+
+## Recomendación de privacidad
+
+NUNCA subir imágenes de los evaluados al repositorio.
+El .gitignore ya está configurado para ignorar PNG, JPG, XLSX y CSV.
+Las imágenes de los evaluados deben quedarse solo en tu laptop local.
